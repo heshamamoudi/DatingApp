@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container">
-    <a class="navbar-brand" href="#">Dating App</a>
+    <a class="navbar-brand" routerLink="/" routerLinkActive="active">Dating App</a>
     <button
       class="navbar-toggler"
       type="button"
@@ -14,17 +14,21 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent" >
-      <ul class="navbar-nav mr-auto" *ngIf="accountService.currentUser$ |async">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Matches</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Lists</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Messages</a>
-        </li>
-      </ul>
+      <ng-container *ngIf="accountService.currentUser$ |async">
+
+        <ul class="navbar-nav mr-auto" >
+          <li class="nav-item ">
+            <a class="nav-link " routerLink="/members" routerLinkActive="active">Matches</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/lists" routerLinkActive="active">Lists</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/messages" routerLinkActive="active">Messages</a>
+          </li>
+        </ul>
+      </ng-container>
+      
       <div class="dropdown" *ngIf="accountService.currentUser$ |async" dropdown>
         <a  class="dropdown-toggle text-light" dropdownToggle aria-controls="dropdown-animated">Welcome User<span class="caret"></span></a>
         <div class="dropdown-menu mt-3" role="menu" *dropdownMenu>
