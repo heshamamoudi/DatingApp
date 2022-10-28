@@ -29,8 +29,8 @@
         </ul>
       </ng-container>
       
-      <div class="dropdown" *ngIf="accountService.currentUser$ |async" dropdown>
-        <a  class="dropdown-toggle text-light" dropdownToggle aria-controls="dropdown-animated">Welcome User<span class="caret"></span></a>
+      <div class="dropdown" *ngIf="(accountService.currentUser$ |async) as user" dropdown>
+        <a  class="dropdown-toggle text-light" dropdownToggle aria-controls="dropdown-animated">Welcome {{user.username|titlecase}}<span class="caret"></span></a>
         <div class="dropdown-menu mt-3" role="menu" *dropdownMenu>
           <a role="menuitem"  class="dropdown-item">Edit Profile</a>
           <div role="menuitem" class="dropdown-divider"></div>

@@ -42,6 +42,7 @@ import { MessagesComponent } from './components/messages/messages.component';
     ToastrModule.forRoot({
       positionClass:'toast-bottom-center'
     }),
+    NgbModule,
   ],
   providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }],
   bootstrap: [AppComponent]
