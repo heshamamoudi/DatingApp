@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import {HttpClientModule} from '@angular/common/http';
+import {HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +19,9 @@ import { MemberDetailComponent } from './components/members/member-detail/member
 import { ListsComponent } from './components/lists/lists.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
+import { ErrorInterceptor } from './_interceptors/error.interceptor';
+import { NotFoundComponent } from './errors/not-found/not-found.component';
 
 
 @NgModule({
@@ -31,6 +34,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MemberDetailComponent,
     ListsComponent,
     MessagesComponent,
+    TestErrorsComponent,
+    NotFoundComponent,
   ],
   imports: [
     TooltipModule.forRoot(),
@@ -45,7 +50,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     }),
     NgbModule,
   ],
-  providers: [{ provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }],
+  providers: [
+    {provide:HTTP_INTERCEPTORS,useClass:ErrorInterceptor,multi:true},
+    { provide: BsDropdownConfig, useValue: { isAnimated: true, autoClose: true } }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
