@@ -1,6 +1,6 @@
 [
   {
-    "UserName": "Ebony",
+    "Username": "Ebony",
     "Gender": "female",
     "DateOfBirth": "1965-03-17",
     "KnownAs": "Ebony",
@@ -19,7 +19,7 @@
     ]
   },
   {
-    "UserName": "Lakeisha",
+    "Username": "Lakeisha",
     "Gender": "female",
     "DateOfBirth": "1974-09-27",
     "KnownAs": "Lakeisha",
@@ -38,7 +38,7 @@
     ]
   },
   {
-    "UserName": "Ella",
+    "Username": "Ella",
     "Gender": "female",
     "DateOfBirth": "1961-05-18",
     "KnownAs": "Ella",
@@ -57,7 +57,7 @@
     ]
   },
   {
-    "UserName": "Kristie",
+    "Username": "Kristie",
     "Gender": "female",
     "DateOfBirth": "1969-03-05",
     "KnownAs": "Kristie",
@@ -76,7 +76,7 @@
     ]
   },
   {
-    "UserName": "Bonita",
+    "Username": "Bonita",
     "Gender": "female",
     "DateOfBirth": "1953-09-08",
     "KnownAs": "Bonita",
@@ -95,7 +95,7 @@
     ]
   },
   {
-    "UserName": "Carly",
+    "Username": "Carly",
     "Gender": "male",
     "DateOfBirth": "1951-04-09",
     "KnownAs": "Carly",
@@ -114,7 +114,7 @@
     ]
   },
   {
-    "UserName": "Christa",
+    "Username": "Christa",
     "Gender": "male",
     "DateOfBirth": "1958-09-08",
     "KnownAs": "Christa",
@@ -133,7 +133,7 @@
     ]
   },
   {
-    "UserName": "Sheri",
+    "Username": "Sheri",
     "Gender": "male",
     "DateOfBirth": "1981-07-23",
     "KnownAs": "Sheri",
@@ -152,7 +152,7 @@
     ]
   },
   {
-    "UserName": "Ivy",
+    "Username": "Ivy",
     "Gender": "male",
     "DateOfBirth": "1972-09-30",
     "KnownAs": "Ivy",
@@ -171,7 +171,7 @@
     ]
   },
   {
-    "UserName": "Meredith",
+    "Username": "Meredith",
     "Gender": "male",
     "DateOfBirth": "1998-06-08",
     "KnownAs": "Meredith",
