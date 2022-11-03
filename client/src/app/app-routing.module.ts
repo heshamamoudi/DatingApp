@@ -3,12 +3,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { ListsComponent } from './components/lists/lists.component';
 import { MemberDetailComponent } from './components/members/member-detail/member-detail.component';
+import { MemberEditComponent } from './components/members/member-edit/member-edit.component';
 import { MemberListComponent } from './components/members/member-list/member-list.component';
 import { MessagesComponent } from './components/messages/messages.component';
 import { NotFoundComponent } from './errors/not-found/not-found.component';
 import { ServerErrorComponent } from './errors/server-error/server-error.component';
 import { TestErrorsComponent } from './errors/test-errors/test-errors.component';
 import { AuthGuard } from './_guard/auth.guard';
+import { PreventUnsavedChangesGuard } from './_guard/prevent-unsaved-changes.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -22,6 +24,7 @@ const routes: Routes = [
         component: MemberListComponent
       },
       { path: 'members/:username', component: MemberDetailComponent },
+      { path: 'member/edit', component:MemberEditComponent,canDeactivate:[PreventUnsavedChangesGuard]},
       { path: 'lists', component: ListsComponent },
       { path: 'messages', component: MessagesComponent },
       
