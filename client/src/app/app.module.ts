@@ -59,7 +59,7 @@ import { LoadingInterceptor } from './_interceptors/loading.interceptor';
     }),
     TabsModule.forRoot(),
     NgxGalleryModule,
-    NgxSpinnerModule,
+    NgxSpinnerModule.forRoot({ type: 'timer' })
     // NgbModule,
   ],
   providers: [
